@@ -48,4 +48,11 @@ public class ArraysSampleTest {
 
         assertEquals(2, result);
     }
+
+    @Test
+    public void testShouldReturnMinusOneWhenSourceArrayDoesNotContainTargetArray() throws Exception {
+        int result = ArraysSample.indexOfSubArray(new int[]{1,2,3,4}, new int[]{2,3,5});
+
+        assertEquals(-1, result);
+    }
 }
