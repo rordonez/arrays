@@ -5,9 +5,16 @@ package rafael.ordonez.arrays;
  */
 public class ArraysSample {
     public static int indexOfSubArray(int [] source, int [] target) {
-        if (source.length == 0 || target.length == 0) {
-            return -1;
+        int result = -1;
+        int j=0;
+        for(int i=0;i<source.length && j<target.length;i++) {
+            if(source[i] == target[j]) {
+                if(result == -1) {
+                    result = i;
+                }
+                j++;
+            }
         }
-        return 0;
+        return result;
     }
 }

@@ -25,4 +25,13 @@ public class ArraysSampleTest {
 
         assertEquals(-1, result);
     }
+
+    @Test
+    public void testShouldReturnZeroWhenTargetArrayIsAPrefix() throws Exception {
+        int resultOneLengthArrays = ArraysSample.indexOfSubArray(new int[]{1}, new int[]{1});
+        int resultLongest = ArraysSample.indexOfSubArray(new int[]{1,2,3}, new int[]{1,2});
+
+        assertEquals(0, resultOneLengthArrays);
+        assertEquals(0, resultLongest);
+    }
 }
