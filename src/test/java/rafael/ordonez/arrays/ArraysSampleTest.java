@@ -34,4 +34,11 @@ public class ArraysSampleTest {
         assertEquals(0, resultOneLengthArrays);
         assertEquals(0, resultLongest);
     }
+
+    @Test
+    public void testShouldReturnIndexPositionWhenTargetArrayIsASubList() throws Exception {
+        int result = ArraysSample.indexOfSubArray(new int[]{1,2,3,4}, new int [] {2,3});
+
+        assertEquals(1, result);
+    }
 }
