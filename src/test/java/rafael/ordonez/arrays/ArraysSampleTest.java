@@ -41,4 +41,11 @@ public class ArraysSampleTest {
 
         assertEquals(1, result);
     }
+
+    @Test
+    public void testShouldReturnIndexPositionWhenTargetArrayIsASufix() throws Exception {
+        int result = ArraysSample.indexOfSubArray(new int[] {1,2,3,4}, new int[] {3,4});
+
+        assertEquals(2, result);
+    }
 }
