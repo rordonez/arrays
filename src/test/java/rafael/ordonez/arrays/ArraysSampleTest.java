@@ -55,4 +55,11 @@ public class ArraysSampleTest {
 
         assertEquals(-1, result);
     }
+
+    @Test
+    public void testShouldReturnMinusOneWhenTargetArrayContainsExtraElements() throws Exception {
+        int result = ArraysSample.indexOfSubArray(new int[]{1,2,3,4}, new int[]{4,5});
+
+        assertEquals(-1, result);
+    }
 }

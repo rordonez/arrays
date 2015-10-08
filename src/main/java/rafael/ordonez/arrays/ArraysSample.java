@@ -7,10 +7,8 @@ public class ArraysSample {
     public static int indexOfSubArray(int [] source, int [] target) {
         int result = -1;
         int j=0;
-        boolean candidate = false;
         for(int i=0;i<source.length && j<target.length;i++) {
-            candidate = source[i] == target[j];
-            if(candidate) {
+            if(source[i] == target[j]) {
                 if(result == -1) {
                     result = i;
                 }
@@ -21,6 +19,6 @@ public class ArraysSample {
                 result = -1;
             }
         }
-        return candidate ? result : -1;
+        return j == target.length ? result : -1;
     }
 }
