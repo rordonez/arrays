@@ -18,4 +18,11 @@ public class ArraysSampleTest {
         assertEquals(-1, result);
         assertEquals(-1, resultWithNonEmptyTarget);
     }
+
+    @Test
+    public void testShouldReturnMinusOneWhenTargetArrayIsEmpty() throws Exception {
+        int result = ArraysSample.indexOfSubArray(new int[]{1}, new int[]{});
+
+        assertEquals(-1, result);
+    }
 }

@@ -5,7 +5,7 @@ package rafael.ordonez.arrays;
  */
 public class ArraysSample {
     public static int indexOfSubArray(int [] source, int [] target) {
-        if (source.length == 0) {
+        if (source.length == 0 || target.length == 0) {
             return -1;
         }
         return 0;
